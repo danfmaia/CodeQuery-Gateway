@@ -1,9 +1,13 @@
+import os
 from fastapi import FastAPI, Request, HTTPException
 import requests
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = FastAPI()
 
-NGROK_URL = "https://6b07-2804-1b3-7003-ba3f-5fdc-be79-75ea-7ad9.ngrok-free.app"
+NGROK_URL = os.getenv("NGROK_URL")
 TIMEOUT = 10  # 10 seconds timeout for requests
 
 # Dummy API keys (for testing purposes)
