@@ -1,0 +1,10 @@
+venv/
+.env
+
+cheatsheet.md
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfvars
