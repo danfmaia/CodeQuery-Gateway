@@ -8,12 +8,11 @@ load_dotenv()
 app = FastAPI()
 
 NGROK_URL = os.getenv("NGROK_URL")
-TIMEOUT = 10  # 10 seconds timeout for requests
+TIMEOUT = 10
 
-# Dummy API keys (for testing purposes)
+# Load API keys from environment variables (comma-separated keys)
 API_KEYS = {
-    "1234567890abcdef": "User1",
-    "abcdef1234567890": "User2"
+    key: f"User{index + 1}" for index, key in enumerate(os.getenv("API_KEYS").split(","))
 }
 
 
