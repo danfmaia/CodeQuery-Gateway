@@ -1,5 +1,7 @@
 # CodeQuery Gateway
 
+> Note: For the core API component of this project, [check this repository](https://github.com/danfmaia/CodeQuery-API).
+
 ## Overview
 
 CodeQuery™ Gateway is a FastAPI-based application designed to interact with a codebase by exposing APIs that can fetch file structures and content from remote servers via an ngrok tunnel. The infrastructure for this gateway is deployed on AWS using Terraform, with an EC2 instance running the FastAPI app and a load balancer for handling requests.
